@@ -4,12 +4,17 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'imc-home',
     pathMatch: 'full'
   },
+ 
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: 'imc-home',
+    loadChildren: () => import('./imc-home/imc-home.module').then( m => m.ImcHomePageModule)
+  },
+  {
+    path: 'convertisseur',
+    loadChildren: () => import('./convertisseur/convertisseur.module').then( m => m.ConvertisseurPageModule)
   }
 ];
 

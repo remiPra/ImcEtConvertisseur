@@ -1,0 +1,78 @@
+<ion-header class="ion-text-center">
+  <ion-toolbar color="success">
+  <ion-grid>
+    <ion-row class="ion-vertical-align-center">
+      <ion-col size="2">
+        <ion-buttons>
+           <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="8">
+        <ion-title>imcHome</ion-title>
+      </ion-col>
+      <ion-col size="2">
+
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+    <ion-grid>
+    
+
+      <ion-row id="formulaire">
+      <ion-col>
+        
+          <ion-label class=labelInput>Entrez votre nom : </ion-label>
+          <ion-input [(ngModel)]="name"></ion-input>
+        
+          
+          <ion-label class=labelInput>Entrez votre taille en cm: </ion-label>
+          <ion-input type="number" [(ngModel)]="height"></ion-input>
+          
+          <ion-label class=labelInput>Entrez votre poids en kg: </ion-label>
+          <ion-input type="number" [(ngModel)]="weight"></ion-input>
+          
+          
+          <div class="buttonContainer">
+            <ion-button shape="round" color="tertiary-contrast" class="buttonCalculate"
+              (click)="calculateBMI()">Calculer</ion-button>
+          </div>
+          
+        </ion-col>
+      </ion-row>
+      
+      <ion-row id="result">
+        <ion-col size=8>
+          <h2 >Bonjour {{this.name}}</h2>     
+        </ion-col>
+       
+          <ion-card>
+            <ion-img  [src]="imageSrc"></ion-img>
+            <ion-card-header>
+              <ion-card-subtitle>{{this.bmiMessage}}</ion-card-subtitle>
+              <ion-card-title>{{this.name}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>Votre IMC (indice de masse corporelle) est exactement :  {{this.bmiValue}}
+              </p>
+             
+            </ion-card-content>
+            <p>Retournez au formulaire :</p>
+            <ion-button  shape="round" color="tertiary-contrast" class="buttonCalculate"
+            (click)="formulaire()">
+                  Formulaire
+            </ion-button>
+          </ion-card>
+      
+
+      </ion-row>
+    </ion-grid>
+    
+    
+
+  </ion-content>

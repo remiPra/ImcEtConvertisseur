@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Convertisseur de devises</ion-title>
+    <ion-buttons  slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+
+
+  <ion-grid>
+    <ion-row id="formulaire">
+    <ion-col>
+        <div class="containerLabel">
+          <ion-label color="success" class=labelInput> Prix en Franc : </ion-label>
+          <ion-input type="number"  (keyup)="euroHandler($event)" ([ngModel])="euroInput" value={{euroInput}} ></ion-input>
+        </div>
+      
+        <div class="containerLabel">
+        <ion-label color="success" class=labelInput> Prix en dollar : </ion-label>
+        <ion-input type="number"  (keyup)="dollarHandler($event)" ([ngModel])="dollarInput" value={{dollarInput}}></ion-input>
+      </div>
+      <div class="containerLabel">
+        <ion-label color="success" class=labelInput> Prix en Yuan : </ion-label>
+        <ion-input type="number" (keyup)="yuanHandler($event)"  ([ngModel])="yuanInput" value={{yuanInput}} ></ion-input>
+        </div>
+        
+        
+       
+      </ion-col>
+    </ion-row>
+    
+</ion-grid>
+
+    </ion-content>

@@ -1,0 +1,41 @@
+ion-title {
+    color:white;
+    background-color:green;
+    font-size: 30px;
+    
+  }
+
+.labelInput {
+  color:green;
+  text-align:center;
+  display:block;
+  margin-top:20px;
+}
+
+ion-input {
+  border:1px solid grey
+}
+
+ion-img {
+  width: 80px;
+  margin: 20px auto
+}
+
+.buttonContainer {
+  width: 150px;
+  text-align: center;
+  margin:20px auto;
+ 
+}
+.buttonCalculate {
+  border-radius:20px;
+  color:green;
+  border:1px solid green
+  
+}
+
+#result {
+  display:none;
+  
+  text-align: center;
+}
